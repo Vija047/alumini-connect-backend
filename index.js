@@ -18,7 +18,7 @@ connectDB();
 const app = express();
 const PORT = process.env.PORT || 7000; // match frontend's fetch URL port
 app.use(cors({
-  origin: "http://localhost:5173", // frontend Vite default
+  origin: "https://alumini-connect-frontend.vercel.app/", // frontend Vite default
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
 }));
@@ -40,5 +40,5 @@ app.get('/', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`✅ Server is running on http://localhost:${PORT}`);
+  console.log(` Server is running on http://localhost:${PORT}`);
 });
